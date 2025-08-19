@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --bg: 255 255 255;
+  --fg: 17 24 39;
+  --card: 245 245 245;
+  --primary: 59 130 246;
+  --accent: 16 185 129;
+  --muted: 107 114 128;
+}
+
+[data-theme="midnight"] {
+  --bg: 3 7 18;
+  --fg: 229 231 235;
+  --card: 17 24 39;
+  --primary: 99 102 241;
+  --accent: 34 197 94;
+  --muted: 148 163 184;
+}
+[data-theme="neon"] {
+  --bg: 2 6 23;
+  --fg: 240 253 244;
+  --card: 15 23 42;
+  --primary: 6 182 212;
+  --accent: 244 63 94;
+  --muted: 148 163 184;
+}
+[data-theme="solar"] {
+  --bg: 253 246 227;
+  --fg: 17 24 39;
+  --card: 250 240 202;
+  --primary: 217 119 6;
+  --accent: 2 132 199;
+  --muted: 87 83 78;
+}
+[data-theme="pastel"] {
+  --bg: 250 250 255;
+  --fg: 31 41 55;
+  --card: 240 240 250;
+  --primary: 168 85 247;
+  --accent: 59 130 246;
+  --muted: 107 114 128;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background-color: rgb(var(--bg));
+  color: rgb(var(--fg));
+}
+
+.card {
+  background-color: rgb(var(--card));
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, rgb(var(--primary)) 0%, rgb(var(--accent)) 100%);
+}
+
+.text-muted {
+  color: rgb(var(--muted));
+}
+
+/* Smooth transitions */
+* {
+  transition: background-color .3s ease, color .3s ease, border-color .3s ease;
+}
